@@ -6,6 +6,9 @@ var container = document.getElementById('Shop ');
 console.log(container);
 var tableEl = document.createElement('table');
 container.appendChild(tableEl);
+var form=document.getElementById('form');
+console.log(form);
+var newform=document.getElementById('newForm')
 
 var locations=[];
 function getRandomNumber (min,max){
@@ -128,7 +131,39 @@ var tdEl = document.createElement('td');
 footerRowEl.appendChild(tdEl);
 tdEl.textContent=totalOfTotals;
 }
-(function renderTable () {
-    footer();
+// (function renderTable () {
+//     footer();
   
- }) ();
+//  }) ();
+
+ form.addEventListener('submit',function (lab9){
+    event.preventDefault();
+    console.log(event.target);
+    var locationName = event.target.locationName.value;
+    console.log(locationName);
+    var max = event.target.max.value;
+    console.log(max);
+    var min = event.target.min.value;
+    console.log(min);
+    var averageHourlyCustomers = event.target.average.value;
+    console.log(averageHourlyCustomers);
+
+    var location= new Location(
+        locationName,
+        max,
+       min,
+       averageHourlyCustomers
+      );
+      var rowCount=tableEl.rows.length;
+tableEl.deleteRow(rowCount-1)
+      location.getCustomerPerHoure(65,23);
+      location.render();
+      newForm.reset();
+      footer();
+    });
+     footer();
+ 
+
+
+
+
