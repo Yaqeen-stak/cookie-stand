@@ -1,11 +1,11 @@
 "use strict"
 var houres=['6Am','7Am','8Am','9Am','10Am','11Am','12Pm','1Pm','2Pm','3Pm','4Pm','5Pm','6Pm','7Pm'];
+// var shopPlace=['seattle','Tokyo','Dubai','Paris','Lima'];
 
 var container = document.getElementById('Shop ');
 console.log(container);
-
-var articleEl = document.createElement('aeticle');
-container.appendChild(articleEl);
+var tableEl = document.createElement('table');
+container.appendChild(tableEl);
 
 var locations=[];
 function getRandomNumber (min,max){
@@ -44,25 +44,28 @@ Location.prototype.getCustomerPerHoure=function(min,max){
         this.total += cookiesPerHoure;
     }
     };
+    
 Location.prototype.render = function () {
-  
-var h2El = document.createElement('h2')
-articleEl.appendChild(h2El)
-h2El.textContent=this.locationName;
+    var RowEl2 = document.createElement('tr');
+tableEl.appendChild(RowEl2);
+var tdEl = document.createElement('td');
+RowEl2.appendChild(tdEl);
+tdEl.textContent = this.locationName;
 
-var ulEl=document.createElement('ul');
-articleEl.appendChild(ulEl)
 for (var i=0;i<houres.length;i++){
-    var liEl=document.createElement('li');
-    ulEl.appendChild(liEl);
-    liEl.textContent=`${houres[i]} : ${this.cookiesPerHoure[i]} Cookies`
+    var tdEl=document.createElement('td');
+    RowEl2.appendChild(tdEl);
+tdEl.textContent=this.cookiesPerHoure[i];
 }
 
-var totalEl =document.createElement('li');
-ulEl.appendChild(totalEl);
-totalEl.textContent=this.total;
+var tdEl =document.createElement('td');
+RowEl2.appendChild(tdEl);
+tdEl.textContent=this.total;
 };
-
+(function renderTable () {
+    header();
+  
+ }) ();
 new Location ('seattle',65,23,6.5);
 locations[0].getCustomerPerHoure();
 locations[0].render();
@@ -85,10 +88,7 @@ new Location ('Lima',16,2,4.6);
 locations[4].getCustomerPerHoure();
 locations[4].render();
 
-function table(){
-var tableEl = document.createElement('table');
-articleEl.appendChild(tableEl);
-
+function header(){
 var headerRowEl = document.createElement('tr');
 tableEl.appendChild(headerRowEl);
 var thEl1 = document.createElement('th');
@@ -97,10 +97,38 @@ thEl1.textContent = '';
 for  (var j=0;j<houres.length; j++){
 var thEl = document.createElement('th');
 headerRowEl.appendChild(thEl);
-thEl1.textContent = houres[j];
+thEl.textContent = houres[j]
 }
 var thEl2=document.createElement('total');
 headerRowEl.appendChild(thEl2);
 thEl2.textContent='total';
 }
- table();
+
+
+function footer(){
+    var footerRowEl= document.createElement('tr');
+    tableEl.appendChild(footerRowEl);
+    var tdEl = document.createElement('td');
+footerRowEl.appendChild(tdEl);
+tdEl.textContent='totals';
+for  (var j=0;j<houres.length; j++){
+    var totalForEachHoure= 0;
+    for (var o=0;o<locations.length;o++){
+totalForEachHoure += locations[o].cookiesPerHoure[j];
+    }
+    var tdEl=document.createElement('td');
+    footerRowEl.appendChild(tdEl);
+    tdEl.textContent=totalForEachHoure;
+}
+var totalOfTotals=0;
+for (var g=0;g<locations.length;g++){
+totalOfTotals += locations[g].total;
+}
+var tdEl = document.createElement('td');
+footerRowEl.appendChild(tdEl);
+tdEl.textContent=totalOfTotals;
+}
+(function renderTable () {
+    footer();
+  
+ }) ();
