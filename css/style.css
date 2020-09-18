@@ -27,6 +27,7 @@ font-family: 'Yellowtail', cursive;
   color: rgb(199, 83, 102);
   margin-bottom: 0px;
   margin-top: 8px;
+  list-style: none;
 }
 #wlc{
     margin-left: 370px;
