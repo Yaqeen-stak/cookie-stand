@@ -1,6 +1,13 @@
 
 *{box-sizing: border-box;
+    
 }
+<<<<<<< HEAD
+
+header img{
+width: 100%;
+height: 350px;
+=======
 header{
     margin: 0%;
     padding: 0%;
@@ -86,19 +93,63 @@ color: rgb(7, 7, 7);
     
 width: 70%;
 height: 100%;
+>>>>>>> master
 display: inline-block;
-margin-top: 15px;
-float: left;
-margin-bottom: 15px;
-margin-left: 200px;
-border-radius: 50%;
-padding: 15px;
+
+
 }
-p{
-    box-sizing: border-box;
-    clear: both;
-    font-size: x-large;
+header h1 {
+    /* display: inline-block; */
+    /* position: fixed; */
     text-align: center;
+    color:mediumorchid;
+margin-top: -200px;
+margin-bottom: 0%;
+font-size: 150px;
+font-family: 'Yellowtail', cursive;
+}
+#nav  ul li{
+  display: inline-block;
+  padding: 10px;
+  float: right;
+  font-size: 20px;
+  color: rgb(199, 83, 102);
+  margin-bottom: 0px;
+  margin-top: 8px;
+}
+#wlc{
+    margin-left: 370px;
+    text-align: center;
+<<<<<<< HEAD
+    color: gray;
+    font-size: 10px;
+    margin-top: -45px;
+    font-family: 'Francois One', sans-serif;
+    margin-bottom: 0px
+
+}
+#enjoy{
+ float: right;
+ /* line-height: 70px; */
+ width: 600;
+
+}
+
+    #open{
+float: left;
+
+
+margin-top: 20px;
+
+}
+    #main2{
+    margin-left: 400px;
+   margin-right: 300px;
+}
+    footer img {
+    width: 100%;
+height: 350px;
+=======
     display: inline-block;
     margin-bottom: 100px;
     text-decoration: none;
@@ -119,21 +170,77 @@ font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 box-sizing: border-box;
 clear: both;
 text-align: center;
+>>>>>>> master
 display: inline-block;
-margin-bottom: 100px;
-color: purple;
-font-size: xx-large;
-text-decoration: none;
+margin-bottom:0px ;
 }
-footer {
-box-sizing: border-box;
-background-color: papayawhip;
-text-align: center;
-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-margin-top: 10px;
+    footer h2 {
+    /* display: inline-block; */
+    /* position: fixed; */
+    text-align: center;
+    color:mediumorchid;
+margin-bottom: 0px%;
+font-size: 40px;
+font-family: 'Francois One', sans-serif;
+margin-top:-300px;
+    }
+    #plac{
+    margin-top:-400px;
+    margin-left: 10px;
 }
-main{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: rgb(218, 195, 195);
+    #plac ul li {
+    color: yellowgreen;
+    font-size: 30px;
+
 }
+    #plac p{
+    color: black;
+    font-size:47px ;
+}
+    #adress{
+    float: right;
+    color: yellowgreen;
+    font-size: 20px;
+    margin-top:-200px;
+    margin-right: 30px;
+}
+#Home ul li a {
+    
+    /* display: inline-block; */
+    padding: 10px;
+    float: left;
+    font-size: 20px;
+    color: rgb(199, 83, 102);
+    margin-bottom: 0px;
+    margin-top: -10px;
+    margin-right: 20px;
+    list-style:none;
+}
+#newForm{
+    font-size: 20px;
+    color: chartreuse;
+    margin-bottom: 20px;
+}
+table{
+    color: purple;
+    font-size: 20px;
+    margin-left: 350px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
