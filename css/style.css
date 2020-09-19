@@ -135,9 +135,14 @@ table{
     margin-left: 350px;
 }
 
-
-
-
+input:invalid {
+    border: 2px dashed palevioletred;
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  }
+ 
 
 
 
