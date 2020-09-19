@@ -38,7 +38,7 @@ locations.push(this);
 console.log(this.houres);
 }
 
-Location.prototype.getCustomerPerHoure=function(min,max){
+Location.prototype.getCustomerPerHoure=function(){
 
     for (var k=0;k<houres.length;k++){
         this.customerPerHoure.push(getRandomNumber(this.min,this.max));
@@ -70,27 +70,14 @@ tdEl.textContent=this.total;
   
  }) ();
 new Location ('seattle',65,23,6.5);
-locations[0].getCustomerPerHoure();
-locations[0].render();
-
 new Location ('Tokyo',23,3,1.2);
-locations[1].getCustomerPerHoure();
-locations[1].render();
-
 new Location ('Dubai',38,11,3.7);
-locations[2].getCustomerPerHoure();
-locations[2].render();
-
-
 new Location ('Paris',38,20,2.3);
-locations[3].getCustomerPerHoure();
-locations[3].render();
-
-
 new Location ('Lima',16,2,4.6);
-locations[4].getCustomerPerHoure();
-locations[4].render();
-
+for(var m=0;m<locations.length;m++){
+locations[m].getCustomerPerHoure();
+locations[m].render();
+}
 function header(){
 var headerRowEl = document.createElement('tr');
 tableEl.appendChild(headerRowEl);
