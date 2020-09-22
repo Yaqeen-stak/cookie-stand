@@ -133,6 +133,7 @@ table{
     color: purple;
     font-size: 20px;
     margin-left: 350px;
+    padding: 30px;
 }
 
 input:invalid {
@@ -142,6 +143,7 @@ input:invalid {
   input:valid {
     border: 2px solid gray;
   }
+ 
  
 
 
